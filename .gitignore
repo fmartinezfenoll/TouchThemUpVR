@@ -1,0 +1,47 @@
+# IDEs
+.vs/
+.idea/
+.vscode/
+
+# General Unreal Build Folders
+/DerivedDataCache/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Project folders to ignore
+/Project/Binaries/
+/Project/Build/
+/Project/DerivedDataCache/
+/Project/Intermediate/
+/Project/Saved/
+Project/.vs/
+Project/.idea/
+Project/.vscode/
+Project/*.sln
+Project/*.opensdf
+Project/*.sdf
+Project/*.VC.db
+Project/*.VC.opendb
+
+# Content
+/Project/Content/Developers/
+/Project/Content/VREditor/
+!/Project/Content/
+
+# Keep these
+!/Project/Config/
+!/Project/Source/
+!/Project/Plugins/
+!/Project/*.uproject
+
+# Optional: ignore final package + videos during dev
+/Package/
+/Video/
+
+# System files
+.DS_Store
+Thumbs.db

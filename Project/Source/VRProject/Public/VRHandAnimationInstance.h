@@ -1,0 +1,21 @@
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Animation/AnimInstance.h"
+#include "VRHandAnimationInstance.generated.h"
+
+UCLASS()
+class VRPROJECT_API UVRHandAnimationInstance : public UAnimInstance
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pose")
+	float PoseAlphaTeleport = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pose")
+	float PoseAlphaGrab = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pose")
+	float IsInDefaultPose = 1;
+};
