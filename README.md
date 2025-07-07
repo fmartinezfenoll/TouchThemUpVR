@@ -6,18 +6,22 @@
 TouchThemUp es una experiencia de realidad virtual desarrollada completamente desde cero en Unreal Engine 5 para Meta Quest 3. El objetivo es simple pero desafiante: recoger todos los objetos del entorno antes de que acabe el tiempo. Esta experiencia combina mecánicas físicas intuitivas, movimiento libre y una estética clara con feedback directo, enfocándose en la interacción física en VR y la agilidad espacial del jugador.
 
 🕹️ Cómo jugar / Controles
-El jugador puede desplazarse usando:
-
-🎮 Joystick (Locomoción suave)
-
-✨ Teletransporte, apuntando con el pulgar (thumbstick)
-
-Además, puede:
-
-✋ Agarrar y soltar objetos con el botón de agarre (grip)
+Tienes que coger todos los cubos antes de que se acabe el tiempo
 
 🎮 Esquema de controles
-Incluye aquí una imagen con un mando Meta Quest 3 con etiquetas (puedes usar Canva, Photoshop o capturas de Unreal con anotaciones).
+![Controles Meta Quest 3](Project/controles.png)
+
+Los controles están distribuidos de la siguiente forma:
+
+Locomoción libre: Joystick izquierdo o derecho (trigger axis)
+
+Teletransporte: Thumbstick hacia adelante (eje Y positivo)
+
+Agarrar objetos: Botón de grip izquierdo o derecho
+
+Soltar objetos: Al soltar el botón de grip
+
+Interacción física: Basada en colisiones reales con físicas activas
 
 📄 Licencias
 Todos los assets utilizados cumplen con licencias compatibles para uso académico .
