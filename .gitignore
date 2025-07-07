@@ -40,7 +40,6 @@ Project/*.VC.opendb
 
 # Optional: ignore final package + videos during dev
 /Package/
-/Video/
 
 # System files
 .DS_Store
