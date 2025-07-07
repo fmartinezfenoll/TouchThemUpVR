@@ -1,4 +1,7 @@
 # TouchThemUp
+
+![TouchThemUp](Project/VRProject.png)
+
 📌 Descripción de la experiencia
 TouchThemUp es una experiencia de realidad virtual desarrollada completamente desde cero en Unreal Engine 5 para Meta Quest 3. El objetivo es simple pero desafiante: recoger todos los objetos del entorno antes de que acabe el tiempo. Esta experiencia combina mecánicas físicas intuitivas, movimiento libre y una estética clara con feedback directo, enfocándose en la interacción física en VR y la agilidad espacial del jugador.
 
