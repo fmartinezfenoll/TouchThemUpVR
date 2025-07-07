@@ -4,10 +4,13 @@
 #include "TimerManager.h"
 #include "StatsColumn3D.h"
 #include "EngineUtils.h"
+#include "VRCharacterBase.h"
 
 AGM_TouchThemUP::AGM_TouchThemUP()
 {
 	PrimaryActorTick.bCanEverTick = true;
+
+	DefaultPawnClass = AVRCharacterBase::StaticClass();
 }
 
 void AGM_TouchThemUP::BeginPlay()

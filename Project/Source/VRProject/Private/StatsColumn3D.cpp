@@ -8,7 +8,8 @@
 	Name->SetRelativeRotation(Rot); \
 	Name->SetHorizontalAlignment(EHTA_Center); \
 	Name->SetTextRenderColor(Color); \
-	Name->SetText(FText::FromString(Text));
+	Name->SetText(FText::FromString(Text)); \
+	Name->SetWorldSize(20.0f);
 
 AStatsColumn3D::AStatsColumn3D()
 {
@@ -16,26 +17,30 @@ AStatsColumn3D::AStatsColumn3D()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	SetRootComponent(Root);
 
-	// Cara Norte (frontal)
-	ADD_TEXT(TimeText_N, FVector(0, 0, 180), FRotator(0, 0, 0), FColor::Cyan, "Tiempo: 00:00");
-	ADD_TEXT(PickupText_N, FVector(0, 0, 140), FRotator(0, 0, 0), FColor::Green, "Pickups: 0 / 0");
-	ADD_TEXT(StatusText_N, FVector(0, 0, 100), FRotator(0, 0, 0), FColor::White, "Estado");
+	const float Radius = 100.f;
+	const float Z = 100.f;
 
-	// Cara Este
-	ADD_TEXT(TimeText_E, FVector(0, 0, 180), FRotator(0, 90, 0), FColor::Cyan, "Tiempo: 00:00");
-	ADD_TEXT(PickupText_E, FVector(0, 0, 140), FRotator(0, 90, 0), FColor::Green, "Pickups: 0 / 0");
-	ADD_TEXT(StatusText_E, FVector(0, 0, 100), FRotator(0, 90, 0), FColor::White, "Estado");
+	// Norte (+X)
+	ADD_TEXT(TimeText_N, FVector(Radius, 0, Z + 40), FRotator(0, 0, 0), FColor::Cyan, "Tiempo: 00:00");
+	ADD_TEXT(PickupText_N, FVector(Radius, 0, Z), FRotator(0, 0, 0), FColor::Green, "Pickups: 0 / 0");
+	ADD_TEXT(StatusText_N, FVector(Radius, 0, Z - 40), FRotator(0, 0, 0), FColor::White, "Estado");
 
-	// Cara Sur
-	ADD_TEXT(TimeText_S, FVector(0, 0, 180), FRotator(0, 180, 0), FColor::Cyan, "Tiempo: 00:00");
-	ADD_TEXT(PickupText_S, FVector(0, 0, 140), FRotator(0, 180, 0), FColor::Green, "Pickups: 0 / 0");
-	ADD_TEXT(StatusText_S, FVector(0, 0, 100), FRotator(0, 180, 0), FColor::White, "Estado");
+	// Este (+Y)
+	ADD_TEXT(TimeText_E, FVector(0, Radius, Z + 40), FRotator(0, 90, 0), FColor::Cyan, "Tiempo: 00:00");
+	ADD_TEXT(PickupText_E, FVector(0, Radius, Z), FRotator(0, 90, 0), FColor::Green, "Pickups: 0 / 0");
+	ADD_TEXT(StatusText_E, FVector(0, Radius, Z - 40), FRotator(0, 90, 0), FColor::White, "Estado");
 
-	// Cara Oeste
-	ADD_TEXT(TimeText_W, FVector(0, 0, 180), FRotator(0, 270, 0), FColor::Cyan, "Tiempo: 00:00");
-	ADD_TEXT(PickupText_W, FVector(0, 0, 140), FRotator(0, 270, 0), FColor::Green, "Pickups: 0 / 0");
-	ADD_TEXT(StatusText_W, FVector(0, 0, 100), FRotator(0, 270, 0), FColor::White, "Estado");
+	// Sur (-X)
+	ADD_TEXT(TimeText_S, FVector(-Radius, 0, Z + 40), FRotator(0, 180, 0), FColor::Cyan, "Tiempo: 00:00");
+	ADD_TEXT(PickupText_S, FVector(-Radius, 0, Z), FRotator(0, 180, 0), FColor::Green, "Pickups: 0 / 0");
+	ADD_TEXT(StatusText_S, FVector(-Radius, 0, Z - 40), FRotator(0, 180, 0), FColor::White, "Estado");
+
+	// Oeste (-Y)
+	ADD_TEXT(TimeText_W, FVector(0, -Radius, Z + 40), FRotator(0, 270, 0), FColor::Cyan, "Tiempo: 00:00");
+	ADD_TEXT(PickupText_W, FVector(0, -Radius, Z), FRotator(0, 270, 0), FColor::Green, "Pickups: 0 / 0");
+	ADD_TEXT(StatusText_W, FVector(0, -Radius, Z - 40), FRotator(0, 270, 0), FColor::White, "Estado");
 }
+
 
 void AStatsColumn3D::BeginPlay()
 {
