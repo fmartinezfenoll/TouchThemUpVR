@@ -38,8 +38,6 @@ Project/*.VC.opendb
 !/Project/Plugins/
 !/Project/*.uproject
 
-# Optional: ignore final package + videos during dev
-/Package/
 
 # System files
 .DS_Store
